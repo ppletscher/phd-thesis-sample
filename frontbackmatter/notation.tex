@@ -1,0 +1,91 @@
+\chapter{Notation}
+
+
+%----------------------------------------------------------------------------
+\section*{Probability}
+
+\begin{tabularx}{\textwidth}{lX}
+	\toprule
+	\tableheadline{Symbol} &		\tableheadline{Meaning} \\
+	\midrule
+	$\pmf(\cdotp)$ &                probability mass function \\
+	$\partitionsum$ &               partition sum; normalization constant of a distribution\\
+    $\logpartitionsum$ &            logarithm of the partition sum\\
+    $\logpartitionsumconjugate$ &   conjugate dual of the log partition sum\\
+	$\expectation_{\pmf}[X]$ &      expected value of $X$,
+                                    w.r.t.\ distribution $\pmf$\\
+    $\covariance_{\pmf}[X]$ &       covariance of $X$, w.r.t.\ distribution $\pmf$\\
+	$\kldivergence(q \| p)$ &		Kullback-Leibler divergence of distributions $q$ and $p$\\
+    $\mutualinformation(p,q)$ &     mutual information of $p$ and $q$\\
+    $\entropy(\pmf)$ &              entropy of the distribution $\pmf$\\
+    $\invtemperature$ &             inverse temperature in a Gibbs distribution\\
+    $\indicatorfunction{\texttt{expr}}{x}$ &    indicator function returning 1
+    if the Boolean expression \texttt{expr} involving variable $x$ is true and
+    0 otherwise.\\
+	\bottomrule
+\end{tabularx}
+
+\vfill
+
+
+%----------------------------------------------------------------------------
+\section*{Structured Output}
+
+\begin{tabularx}{\textwidth}{lX}
+	\toprule
+	\tableheadline{Symbol} &		\tableheadline{Meaning} \\
+	\midrule
+	$\outputdomain_i$ &                 domain of the $i$-th output variable \\
+	$\outputvar_i$ &                    individual output variable, $\outputvar_i \in\outputdomain_i$ \\
+	$\outputdomain$ &                   product space of all the individual
+    output domains \\
+	$\outputvarv$ &                     all the output variables of an example \\
+	$\inputdomain$ &                      domain of the input variables\\
+	$\inputvarv$ &                     all the input variables of an example \\
+	$\hiddendomain_i$ &                 domain of the $i$-th hidden output variable \\
+	$\hiddenvar_i$ &                    individual hidden output variable,
+    $\hiddenvar_i \in\hiddendomain_i$ \\
+	$\hiddendomain$ &                   product space of all individual
+    hidden output domains \\
+	$\hiddenvarv$ &                     all the hidden output variables of an example \\
+    $\featuremapv(\inputvarv,\outputvarv)$ &    feature map of an example
+    $(\inputvarv,\outputvarv)$\\
+    $\featuremapdiffv(\outputvarv'|\inputvarv,\outputvarv)$ &
+    feature map difference: $\featuremapv(\inputvarv,\outputvarv') -
+    \featuremapv(\inputvarv,\outputvarv)$\\
+    $\errorterm_{\outputvarv^\groundtruth}(\outputvarv)$ &  loss when
+    predicting $\outputvarv$ instead of $\outputvarv^\groundtruth$\\
+    $\weightv$ &                        (linear) parameters of a structured
+    model\\
+    $\loss(\weightv,\inputvarv,\outputvarv)$ &
+                        surrogate loss of parameter $\weightv$ for example
+                        $(\inputvarv,\outputvarv)$\\
+	\bottomrule
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------
+\section*{Factor Graphs and Graphical Models}
+
+\begin{tabularx}{\textwidth}{lX}
+	\toprule
+	\tableheadline{Symbol} &		\tableheadline{Meaning} \\
+	\midrule
+	$\energy(\outputvarv)$ &        energy of output configuration $\outputvarv$ \\
+    $\potential_{\factoridx}(\outputvarv_\factoridx)$ &    potential of factor
+    $\factoridx$ and assignment $\outputvarv_{\factoridx}$\\
+    $\potentialneg_{\factoridx}(\outputvarv_\factoridx)$ &    negative potential (score) of factor
+    $\factoridx$ and assignment $\outputvarv_{\factoridx}$\\
+    $\gmgraph$ &                    graph \\
+    $\gmvertex$ &                   vertices of a graph\\
+    $\gmedge$ &                     edges of a graph\\
+    $\neighborhood(i)$ &            neighboring vertices of vertex $i$\\
+    $\degree_i$ &                   degree of the $i$-th vertex\\
+    $\fggraph$ &                    factor graph\\
+    $\marginalvarv$ &               marginal variables\\
+    $\marginalpolytope$ &           marginal polytope\\
+    $\localmarginalpolytope_{\gmgraph}$ &      local marginal polytope for graph
+    $\gmgraph$\\
+	\bottomrule
+\end{tabularx}
+

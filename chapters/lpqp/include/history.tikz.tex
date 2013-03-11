@@ -1,0 +1,75 @@
+\begin{tikzpicture}[scale=1]
+
+%% maximum value
+%\pgfplotstablesort[sort key={[index] 2},sort cmp={float >}, col sep=comma]{\sorted}{\outputfile}
+%\pgfplotstablegetelem{0}{[index] 2}\of{\sorted}
+%\let\maxvalue=\pgfplotsretval
+%
+%% minimum value
+%\pgfplotstablesort[sort key={[index] 3},sort cmp={float <}, col sep=comma]{\sorted}{\outputfile}
+%\pgfplotstablegetelem{0}{[index] 3}\of{\sorted}
+%\let\minvalue=\pgfplotsretval
+
+\begin{axis}[
+xlabel=iteration,
+ylabel=objective,
+xmin=0,
+xmax=\xmax,
+ymin=\ymin,
+ymax=\ymax,
+x tick label style={
+%\pgfkeys{/pgf/number format/.cd,std,fixed zerofill,precision=2}
+},
+%legend pos=south east 
+legend style={
+    %cells={anchor=east},
+    legend pos=outer north east,}
+]
+
+\addplot [
+color=blue,
+solid,
+style=thick,
+]
+table[x index=0,y index=1, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{LPQP-U}
+
+\addplot [
+color=red,
+solid,
+style=thick,
+]
+table[x index=0,y index=2, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{QP}
+
+\addplot [
+color=green,
+solid,
+style=thick,
+]
+table[x index=0,y index=3, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{LP}
+
+\addplot [
+color=magenta,
+solid,
+style=thick,
+]
+table[x index=0,y index=4, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{decoded}
+
+% vertical lines for points where rho changed
+\input{\outputfilerho}
+
+% TRWS solution
+\input{\outputfiletrws}
+
+% MPLP solution
+\input{\outputfilemplp}
+
+\end{axis}
+\end{tikzpicture}

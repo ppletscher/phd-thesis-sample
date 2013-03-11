@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=1]
+\begin{semilogxaxis}[
+xlabel=$\rho_0$,
+ylabel=runtime (seconds),
+x tick label style={
+},
+legend style={
+    %cells={anchor=east},
+    legend pos=outer north east,}
+]
+
+\addplot [
+color=blue,
+solid,
+style=thick,
+]
+table[x index=0,y index=4, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+\addlegendentry{LPQP-T}
+
+\addplot [
+color=green,
+dashed,
+style=thick,
+]
+table[x index=0,y index=5, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+\addlegendentry{LPQP-U}
+
+\end{semilogxaxis}
+\end{tikzpicture}

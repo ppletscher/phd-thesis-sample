@@ -1,0 +1,140 @@
+\documentclass[%
+%    a5paper,
+    a4paper,
+    footinclude=true,
+    headinclude=true
+]{scrbook}
+\KOMAExecuteOptions{fontsize=11pt}
+
+\usepackage{preamble}
+
+\begin{document}
+
+\selectlanguage{american}
+
+
+\frontmatter
+
+
+%----------------------------------------------------------------------------
+% Titlepage
+\input{frontbackmatter/titlepage.tex}
+\input{frontbackmatter/titleback.tex}
+\cleardoublepage
+
+
+%----------------------------------------------------------------------------
+% Abstract
+\cleardoublepage
+\def\dir{frontbackmatter}
+\input{\dir/abstract.tex}
+
+
+%----------------------------------------------------------------------------
+% Publications
+\cleardoublepage
+\def\dir{frontbackmatter}
+\input{\dir/publications.tex}
+
+
+%----------------------------------------------------------------------------
+% Acknowledgements
+\cleardoublepage
+\def\dir{frontbackmatter}
+\input{\dir/acknowledgements.tex}
+
+
+%----------------------------------------------------------------------------
+% Contents
+\cleardoublepage
+\def\dir{frontbackmatter}
+\input{\dir/contents.tex}
+
+
+\mainmatter
+
+
+%----------------------------------------------------------------------------
+% Introduction
+\def\dir{chapters/introduction}
+\input{\dir/introduction.tex}
+
+
+%----------------------------------------------------------------------------
+% Background
+\def\dir{chapters/background}
+\input{\dir/background.tex}
+
+
+%----------------------------------------------------------------------------
+% LPQP for MPE Inference
+\def\dir{chapters/lpqp}
+\input{\dir/lpqp.tex}
+
+
+%----------------------------------------------------------------------------
+% Learning With High-order Losses
+\def\dir{chapters/high_order_loss}
+\input{\dir/hol.tex}
+
+
+%----------------------------------------------------------------------------
+% Maximum Entropy and Maximum Margin
+\def\dir{chapters/maximum_entropy_margin}
+\input{\dir/maximum_entropy_margin.tex}
+
+
+%----------------------------------------------------------------------------
+% Part & Clamp 
+\def\dir{chapters/part_clamp}
+\input{\dir/part_clamp.tex}
+
+
+%----------------------------------------------------------------------------
+% Discussion
+\def\dir{chapters/discussion}
+\input{\dir/discussion.tex}
+
+
+\backmatter
+
+
+%----------------------------------------------------------------------------
+% Bibliography
+\def\dir{frontbackmatter}
+\input{\dir/bibliography.tex}
+
+
+%----------------------------------------------------------------------------
+% Notation
+\def\dir{frontbackmatter}
+\input{\dir/notation.tex}
+
+
+%----------------------------------------------------------------------------
+% Acronyms
+\def\dir{frontbackmatter}
+\input{\dir/acronyms.tex}
+
+
+%----------------------------------------------------------------------------
+% Index
+\cleardoublepage
+\def\dir{frontbackmatter}
+\input{\dir/index.tex}
+
+
+%%----------------------------------------------------------------------------
+%% CV
+%\def\dir{frontbackmatter}
+%\input{\dir/cv.tex}
+
+
+%----------------------------------------------------------------------------
+% Colophon
+\pagebreak
+\def\dir{frontbackmatter}
+\input{\dir/colophon.tex}
+
+
+\end{document}

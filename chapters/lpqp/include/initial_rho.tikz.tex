@@ -1,0 +1,78 @@
+\small
+\begin{tikzpicture}[scale=0.7]
+
+% axis and plot for the energy
+\begin{semilogxaxis}[
+scale only axis,
+axis y line*=left, 
+xlabel=$\rho_0$,
+ylabel=energy,
+x tick label style={
+},
+legend style={
+    %cells={anchor=east},
+    legend pos=north west,}
+]
+
+\addplot [
+color=blue,
+solid,
+mark=triangle,
+style=thick,
+]
+table[x index=0,y index=1, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+\addlegendentry{LPQP-T}
+
+\addplot [
+color=red,
+solid,
+mark=square,
+style=thick,
+]
+table[x index=0,y index=2, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+\addlegendentry{LPQP-U}
+
+\end{semilogxaxis}
+
+
+% axis and plot for the run time
+\begin{semilogxaxis}[
+scale only axis,
+axis y line*=right,
+axis x line=none,
+xlabel=$\rho_0$,
+ylabel=runtime (seconds),
+x tick label style={
+},
+legend style={
+    legend pos=outer north east,}
+]
+
+\addplot [
+color=blue,
+dashed,
+mark=triangle,
+style=thick,
+mark options= solid,
+]
+table[x index=0,y index=4, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+
+\addplot [
+color=red,
+dashed,
+mark=square,
+style=thick,
+mark options= solid,
+]
+table[x index=0,y index=5, header=true, col sep=comma]
+{\dir/include/initial_rho.csv};
+
+\end{semilogxaxis}
+
+
+
+\end{tikzpicture}
+\normalsize

@@ -1,0 +1,147 @@
+% document options
+\newcommand{\myTitle}{Towards Accurate Structured Output Learning and Prediction}
+\newcommand{\myTitleOnTitlePageLineOne}{Towards Accurate Structured Output}
+\newcommand{\myTitleOnTitlePageLineTwo}{Learning and Prediction}
+\newcommand{\myName}{Patrick Andr\'e Pletscher}
+\newcommand{\myProf}{Joachim M. Buhmann}
+\newcommand{\myDepartment}{Department of Computer Science}
+\newcommand{\myUni}{\protect{ETH Z\"urich}}
+\newcommand{\myLocation}{Z\"urich}
+\newcommand{\myTime}{2012}
+
+% character encoding and languages
+\usepackage[american, ngerman]{babel}
+\usepackage[utf8]{inputenc}
+%\input glyphtounicode
+%\pdfgentounicode=1
+
+% math packages
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{mathtools}
+
+% thesis style
+\usepackage[%
+%    drafting,
+%    minionpro,
+%    minionprospacing,
+    dottedtoc,
+    floatperchapter,
+    parts
+]{classicthesis}
+%\usepackage{MnSymbol}
+
+% define page size and margins for the final print
+\usepackage{geometry}
+\geometry{paperwidth=18.91cm,paperheight=24.589cm,
+bindingoffset=0.89cm, % gutter
+inner=2cm, % inside margin
+outer=4cm, % outside margin
+vmargin=2.5cm, % top and bottom margins
+marginparsep=0.6cm,
+marginparwidth=3cm,
+}
+
+% tables
+\usepackage{tabularx}
+\newcommand{\tableheadline}[1]{\multicolumn{1}{c}{\spacedlowsmallcaps{#1}}}
+
+% algorithms
+\usepackage[chapter]{algorithm}
+\usepackage{algorithmic}
+
+% notation
+\usepackage{notation}
+
+% fixes for marginpar and latex
+\usepackage{mparhack}
+\usepackage{fixltx2e} 
+
+% indexing
+\usepackage{makeidx}
+\makeindex
+
+% graphics, figures, captions
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{external}
+\usetikzlibrary{calc}
+\usepackage{tkz-gm} % graphical models
+\usepackage{caption}
+\usepackage{subcaption}
+
+% table
+\usepackage{slashbox}
+\usepackage{rotating}
+\usepackage{multirow}
+
+\tikzexternalize
+\tikzsetexternalprefix{externalized/}
+
+% hyperref
+%\usepackage{bookmark,hyperref}
+\usepackage{hyperref}
+\hypersetup{%
+    %draft,	% = no hyperlinking at all (useful in b/w printouts)
+    colorlinks=true, linktocpage=true, pdfstartpage=1, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    %colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=1, pdfstartview=FitV,% 
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%hyperfootnotes=true,%nesting=true,%frenchlinks,%
+    urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black, %pagecolor=Black,%
+    pdftitle={\myTitle},%
+    pdfauthor={\myName, \myUni},%
+    pdfsubject={},%
+    pdfkeywords={},%
+}   
+\renewcommand{\subsectionautorefname}{Subsection}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\chapterautorefname}{Chapter}
+\def\algorithmautorefname{Algorithm}
+
+% bibliography
+\usepackage{csquotes}
+\usepackage[%
+    style=authoryear,%
+    dashed=false,%
+    doi=false,%
+    isbn=false,%
+    hyperref=auto,%
+    backref,%
+    backrefstyle=three,%
+    maxbibnames=99,%
+    maxcitenames=3,
+]{biblatex}
+%\renewbibmacro{in:}{%
+%  \ifentrytype{article}{}{%
+%  \printtext{\bibstring{in}\intitlepunct}}}
+\bibliography{references}
+
+% theorems, definitions
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\providecommand*{\lemmaautorefname}{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+% acronyms
+\PassOptionsToPackage{printonlyused,smaller}{acronym}
+\usepackage{acronym} % nice macros for handling all acronyms in the thesis
+\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms
+
+% dummy counter for correct TOC etc
+\newcounter{dummy}
+
+% for cover page
+\usepackage{pdfpages}

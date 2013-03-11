@@ -1,0 +1,38 @@
+\begin{tikzpicture}
+[scale=1]
+
+\begin{axis}[
+xlabel=instance,
+ylabel=score,
+width=8cm,
+height=6cm,
+ymin=0,
+ymax=1,
+legend pos=north west 
+%legend style={
+%    %cells={anchor=east},
+%    legend pos=outer north east,}
+]
+
+\addplot [
+color=blue,
+mark=o,
+style=thick,
+only marks
+]
+table[x index=0,y index=1, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{LPQP-U}
+
+\addplot [
+color=red,
+mark=x,
+style=thick,
+only marks
+]
+table[x index=0,y index=2, header=true, col sep=comma]
+{\outputfile};
+\addlegendentry{TRWS}
+
+\end{axis}
+\end{tikzpicture}

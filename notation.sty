@@ -1,0 +1,138 @@
+% probability
+\newcommand{\pdf}{p}
+\newcommand{\pmf}{P}
+\newcommand{\partitionsum}{Z}
+\newcommand{\logpartitionsum}{A}
+\newcommand{\logpartitionsumconjugate}{A^{*}}
+\newcommand{\expectation}{\mathbb{E}}
+\newcommand{\covariance}{\mathrm{Cov}}
+\newcommand{\kldivergence}{D_{KL}}
+\newcommand{\mutualinformation}{I}
+\newcommand{\entropy}{H}
+
+
+% general math
+\newcommand{\argmax}{\operatornamewithlimits{argmax}}
+\newcommand{\argmin}{\operatornamewithlimits{argmin}}
+\newcommand{\indicatorfunction}[2]{\mathbb{I}_{#1}(#2)}
+\newcommand{\realnumbers}{\mathbb{R}}
+\newcommand{\transpose}{\mathsf{T}}
+\newcommand{\defeq}{:=}
+\newcommand{\vectorize}{\mathrm{vec}}
+\newcommand{\bigoh}{\mathcal{O}}
+
+
+% thermodynamic potentials
+\newcommand{\invtemperature}{\beta}
+\newcommand{\freeenergy}{F}
+\newcommand{\internalenergy}{U}
+\newcommand{\canonicalentropy}{S}
+
+
+% learning / optimization
+\newcommand{\optimum}{\star}
+\newcommand{\loss}{\ell}
+\newcommand{\regularizerweight}{\lambda}
+\newcommand{\regularizer}{\Omega}
+\newcommand{\lonenorm}{L_1}
+\newcommand{\ltwonorm}{L_2}
+\newcommand{\lpnorm}{L_p}
+\newcommand{\lagrangian}{\mathcal{L}}
+
+
+% structured output prediction
+\newcommand{\inputvar}{x}
+\newcommand{\inputvarv}{\bm{\inputvar}}
+\newcommand{\inputdomain}{\mathcal{X}}
+\newcommand{\outputvar}{y}
+\newcommand{\outputvarv}{\bm{\outputvar}}
+\newcommand{\outputdomain}{\mathcal{Y}}
+\newcommand{\hiddenvar}{z}
+\newcommand{\hiddenvarv}{\bm{\hiddenvar}}
+\newcommand{\hiddendomain}{\mathcal{Z}}
+\newcommand{\featuremap}{\phi}
+\newcommand{\featuremapv}{\bm{\featuremap}}
+\newcommand{\featuremapdiff}{\psi}
+\newcommand{\featuremapdiffv}{\bm{\featuremapdiff}}
+\newcommand{\errorterm}{\Delta}
+\newcommand{\weight}{w}
+\newcommand{\weightv}{\bm{\weight}}
+\newcommand{\predictionfunction}{f}
+%\newcommand{\predictionfunctionv}{\bm{\predictionfunction}} % most prediction functions should be boldface, but looks ugly!
+\newcommand{\groundtruth}{*}
+\newcommand{\hilbertspace}{\mathcal{H}}
+\newcommand{\slackvar}{\xi}
+\newcommand{\slackvarv}{\bm{\slackvar}}
+
+\newcommand{\kernelmatrix}{K}
+\newcommand{\kernelmatrixm}{\bm{\kernelmatrix}}
+\newcommand{\errortermvcomp}{e}
+\newcommand{\errortermv}{\bm{\errortermvcomp}}
+
+\newcommand{\score}{s}
+
+
+% factor graphs and parameterization
+\newcommand{\templateidx}{t}
+\newcommand{\templateset}{\mathcal{T}}
+\newcommand{\factoridx}{c}
+\newcommand{\factorset}{\mathcal{C}}
+\newcommand{\fggraph}{\mathcal{FG}}
+\newcommand{\fgvarnode}{\mathcal{V}}
+\newcommand{\fgfactornode}{\mathcal{C}}
+\newcommand{\fgedge}{\mathcal{E}}
+
+
+% undirected graphical models
+\newcommand{\gmgraph}{\mathcal{G}}
+\newcommand{\gmvertex}{\mathcal{V}}
+\newcommand{\gmedge}{\mathcal{E}}
+\newcommand{\neighborhood}{\mathcal{N}}
+\newcommand{\degree}{d}
+
+
+% energy minimization
+\newcommand{\energy}{E}
+\newcommand{\energyneg}{\bar{E}}
+\newcommand{\potential}{\theta}
+\newcommand{\potentialv}{\bm{\potential}}
+\newcommand{\potentialneg}{\bar{\theta}}
+\newcommand{\potentialnegv}{\bar{\bm{\theta}}}
+\newcommand{\messagevar}{m}
+
+
+% marginal polytope
+\newcommand{\marginalvar}{\mu}
+\newcommand{\marginalvarv}{\bm{\marginalvar}}
+\newcommand{\marginalpolytope}{\mathcal{M}}
+\newcommand{\localmarginalpolytope}{\mathcal{L}}
+
+
+% exponential family
+\newcommand{\overcompletefeaturemap}{\varphi}
+\newcommand{\overcompletefeaturemapv}{\bm{\varphi}}
+\newcommand{\overcompletedatamatrix}{\Upsilon}
+\newcommand{\overcompletedatamatrixv}{\bm{\Upsilon}}
+\newcommand{\canonicalparameterdomain}{\Omega}
+
+
+% composite likelihood and Part & Clamp
+\newcommand{\outputdomainsub}{\underline{\outputdomain}}
+\newcommand{\outputdomainsup}{\bar{\outputdomain}}
+\newcommand{\modelset}{\mathcal{A}}
+\newcommand{\conditioningset}{\mathcal{B}}
+\newcommand{\decompositions}{\mathcal{D}}
+\newcommand{\fvset}{\mathcal{F}}
+\newcommand{\fvsetcomplement}{\gmvertex\backslash\fvset}
+\newcommand{\fvsetcomplementshort}{\bar{\fvset}}
+
+
+% LPQP
+\newcommand{\potentialm}{\bm{\Theta}}
+\newcommand{\penaltyp}{g}
+\newcommand{\tree}{a}
+\newcommand{\trees}{\mathcal{A}}
+\newcommand{\localmarginalvar}{\nu}
+\newcommand{\localmarginalvarv}{\bm{\localmarginalvar}}
+\newcommand{\slave}{s}
+\newcommand{\lambdav}{\bm{\lambda}}
